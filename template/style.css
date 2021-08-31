@@ -84,12 +84,20 @@
     margin-top: 40px;
 }
 
-.sign-in img,.panier img{
+.sign-in img{
     width: 40px;
     height: 40px;
-   
+   transform: translateX(15px);
     cursor: pointer;
 }
+
+.panier img{
+    width: 40px;
+    height: 40px;
+   transform: translateX(7px);
+    cursor: pointer;
+}
+
 .sign-in img:hover,.panier img:hover,.btn-contact:hover,#contact:hover{
     opacity: 0.8;
 }

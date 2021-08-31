@@ -187,7 +187,7 @@ function Header() {
 
               </Panier>
               <Contact>
-                  <button classNameName="btn-contact">Nous Contacter</button>
+                  <button className="btn-contact">Nous Contacter</button>
 
               </Contact>
           </HeaderDiv>

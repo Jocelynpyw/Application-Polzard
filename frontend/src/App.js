@@ -5,7 +5,7 @@ import Carousel from './Components/Carousel'
 
 function App() {
   return (
-    <div classNameNameName="App">
+    <div className="App">
 
       
       <Header/>
@@ -18,10 +18,7 @@ function App() {
 
 
 
-            {/* <!--               barnier carousel            --> */}
-
-
-        {/* <!--            <--- section titre de nouveates           --> */}
+           
 
 
               <div id="nouveautes">
@@ -29,7 +26,7 @@ function App() {
                   <a href="#!">Toutes les Nouveautes > ></a>
               </div>
 
-              {/* <!--                   slide  div des nouvoutes            --> */}
+             
 
 
     </div>

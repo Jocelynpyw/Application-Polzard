@@ -2,47 +2,42 @@ import React from 'react'
 import Header from './Components/Header'
 import Navbar from './Components/Navbar'
 import Carousel from './Components/Carousel'
-import data from './data';
+import {BrowserRouter, Route} from 'react-router-dom';
+import HomeScreen from './Screens/HomeScreen';
+import ProductScreen from './Screens/ProductScreen';
 
 function App() {
   return (
-    <div className="App">
+    <BrowserRouter>
+        
 
-      
-      <Header/>
-      <Navbar/>
-      <Carousel/>
+          
+          <Header/>
+          <Navbar/>
+          <Carousel/>
 
-              <div id="nouveautes">
-                  <p>Nouveautes</p>
-                  <a href="#!">Toutes les Nouveautes > ></a>
-              </div>
+         <main>   
+              <Route path="/product/:id" component={ProductScreen}></Route>
+              <Route path="/" component={HomeScreen} exact></Route>
+          </main> 
+            {/* <div className="container-fluid">
+                  <div className="row" >
+                    {
 
-        <div className="container-fluid">
-              <div className="row" >
-                {
+                      data.products.map((product)=>(
+
+                        <SectionNouveaute product={product} key={product._id}/>
                   
-                  data.products.map((product,index)=>(
-                    <div className="article col-md-2 col-xs-6" key={index}>
-                    <div className="article-img">
-                        <img src={product.image} alt="Image d'un article"/>
-                    </div>
-                    <p className="article-name">{product.name} </p>
-                    <p className="article-prix">{product.price}</p>
-                    <div className="article-panier">
-                        <img src="img/panier3.svg" alt="ajouter au panier"/>
-                    </div>
-  
-                </div>
-                  ))
-                }
+                      ))
+                    }
+                 </div>  
+           </div>   */}
 
 
 
-             </div>
 
-       </div>               
- </div>
+    
+ </BrowserRouter>
   );
 }
 

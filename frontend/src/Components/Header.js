@@ -182,7 +182,7 @@ function Header() {
                   <p>se connecter</p>
               </SignIn>
               <Panier>
-                  <img src="img/panier3.png" alt=""/>
+                  <img src="img/panier3.svg" alt=""/>
                   <p>mon panier</p>
 
               </Panier>

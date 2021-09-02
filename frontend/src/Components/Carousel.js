@@ -16,7 +16,7 @@ function Carousel() {
                     <img className="d-block w-100" src="img/BAN1.jpg" alt="First slide"/>
                     </div>
                     <div className="carousel-item">
-                    <img className="d-block w-100" src="img/BAN4.jpg" alt="Second slide" style={{height: '458.8px', width: '782px', objectFit: 'cover'}}/>
+                    <img className="d-block w-100" src="img/BAN2.jpg" alt="Second slide" style={{height: '458.8px', width: '782px', objectFit: 'cover'}}/>
                     </div>
                     <div className="carousel-item">
                     <img className="d-block w-100" src="img/BAN3.jpg" alt="Third slide" style={{height: '458.8px', width:' 782px', objectFit: 'cover'}}/>

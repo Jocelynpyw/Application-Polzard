@@ -12,6 +12,7 @@ const HeaderDiv = styled.div`
     width: 100%;
     height: 90px;
   position: static;
+  /* margin-bottom:30px; */
 `;
 
 const Logo = styled.div`

@@ -1,6 +1,7 @@
 import React from 'react'
 import data from '../data';
 
+
  function ProductScreen(props) {
      const product = data.products.find((x)=>x._id===props.match.params.id);
      if(!product){
@@ -11,55 +12,66 @@ import data from '../data';
     return (
         
         <div>
-            <div className="container">
+            <div className="container description-sections">
 
                      <div className="row">
-                <div className="col-md-6" >
-                    <img src={`${product.image} `} alt={`image de ${product.name} : ${product.image}`}></img>
+                <div className="col-md-6  product-screen-box">
+                    <img className='img-product-screen' src={require(`../../public/${product.image}`).default} alt={`image de ${product.name} : ${product.image}`}/>
                 </div>
                 <div className="col-md-3">
-                    <ul>
-                        <li><h1>{product.name}</h1></li>
-                        <li>{product.brand}</li>
-                        <li> prix : {product.price} Fcfa</li>
-                        <li>Description: {product.description}</li>
+                    <ul className="ul">
+                        <li><h1 className="product-title">{product.name}</h1></li>
+                        <li className="product-brand">Frabricant : {product.brand}</li>
+                        <li className="procuct-description">Description: {product.description}</li>
+                        <li className="product-price"> prix : {product.price} Fcfa</li>
+                        <br/>
+                         <button className="btn btn-success w-40" style={{width:'220px'}}>Ajouter au Panier</button>
+
+
                         
                     </ul>
                 </div>
                 <div className="col-md-3">
-                    <ul>
+                    <ul className="ul">
                         <li>
                                  <div className="row">
                                         <div>Price : </div>
-                                        <div >{product.price}</div>
+                                        <div  className="product-price">{product.price}</div>
                                  </div>
 
                         </li>
 
                         <li>
                             <div className="row">
-                                <div>Status :</div>
+                                <div className="product-status">Status :</div>
                                                 <div style={{display:'inline-block'}}>
                                         {
                                             product.countInStock>0?(<span className="success">
                                                 In Stock
-                                            </span>):(<span className="danger">Unavaiible</span>)
+                                            </span>):(<span className="error">Unavaiible</span>)
                                         }
                                   </div>
                             </div>
                         </li>
                         <li>
-                            <button className="btn btn-success">Ajouter au panier</button>
+                            <button className="btn btn-success">Ajouter au panier</button><br/>
+                            <button className="btn btn-success " style={{width:'220px'}}>Acheter</button>
+
+                        
+                        <br/>
                         </li>
+                        
                     </ul>
                     
                    
                     
+                        
                 </div>
+
             </div>
            
             </div>
-           Product Screen 
+          
         </div>
     )
 }

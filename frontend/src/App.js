@@ -10,32 +10,15 @@ function App() {
   return (
     <BrowserRouter>
         
-
           
           <Header/>
           <Navbar/>
           <Carousel/>
 
          <main>   
-              <Route path="/product/:id" component={ProductScreen}></Route>
+              <Route path="/product/:id" component={ProductScreen} ></Route>
               <Route path="/" component={HomeScreen} exact></Route>
           </main> 
-            {/* <div className="container-fluid">
-                  <div className="row" >
-                    {
-
-                      data.products.map((product)=>(
-
-                        <SectionNouveaute product={product} key={product._id}/>
-                  
-                      ))
-                    }
-                 </div>  
-           </div>   */}
-
-
-
-
     
  </BrowserRouter>
   );

@@ -1,22 +1,59 @@
-import React from 'react'
-import data from '../data' ;
-import styled from 'styled-components'
+import React, { useState, useEffect, Fragment } from 'react'
+import axios from 'axios';
 import SectionNouveaute from '../Components/SectionNouveaute';
- function HomeScreen() {
+import LoadingBox from '../Components/LoadingBox';
+import MessageBox from '../Components/MessageBox';
+import Carousel from '../Components/Carousel';
+import Categories from '../Components/Categories';
 
-    return (
-         <div className="container-fluid">
-                  <div className="row" >
+
+function HomeScreen() {
+   const [products,setProducts]= useState([]);
+   const [loading,setLoading]= useState(false)
+   const [error,setError]= useState(false)
+
+   useEffect(()=>{
+     const fetchData = async ()=>{
+       try{
+           setLoading(true)
+            const {data} = await axios.get('/api/products');
+            setLoading(false);
+            setProducts(data);
+       }catch(err){
+          setError(err.message);
+          setLoading(false);
+       }
+      
+
+     };
+     fetchData()
+   },[]);
+
+    return ( 
+      <Fragment>
+      <Carousel/>
+                  <div className="container-fluid">
+                      {
+                    loading? (<LoadingBox></LoadingBox>):
+                  error? (<MessageBox>{error}</MessageBox>):(
+                    <div className="row" >
                     {
 
-                      data.products.map((product)=>(
+                      products.map((product)=>(
 
                         <SectionNouveaute product={product} key={product._id}/>
                   
                       ))
                     }
-                 </div>  
-           </div>  
+                </div>  
+                  )
+                  }
+                            
+                    </div>  
+
+                    <Categories/>
+
+           </Fragment>
     )
 }
 

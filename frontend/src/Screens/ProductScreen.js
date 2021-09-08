@@ -1,5 +1,6 @@
 import React from 'react'
 import data from '../data';
+// import {Link} from 'react-router-dom';
 
 
  function ProductScreen(props) {
@@ -12,7 +13,8 @@ import data from '../data';
     return (
         
         <div>
-            <div className="container description-sections">
+            {/* <Link to='/'>Allez a l'Accueil</Link> */}
+            <div className="container description-sections" style={{marginTop:'50px'}}>
 
                      <div className="row">
                 <div className="col-md-6  product-screen-box">

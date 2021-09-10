@@ -1,0 +1,11 @@
+.title{
+    font-size: 2.1rem;
+    text-align: center;
+    color: rgb(27,196,27) ;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+.title-sous-categories{
+    font-size: 1.4rem;
+    margin: 20px 10px;
+}

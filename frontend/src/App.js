@@ -4,7 +4,7 @@ import Navbar from './Components/Navbar'
 import {BrowserRouter, Route} from 'react-router-dom';
 import HomeScreen from './Screens/HomeScreen';
 import ProductScreen from './Screens/ProductScreen';
-import Categories from './Components/Categories';
+import CategorieScreen from './Screens/CategorieScreen';
 
 function App() {
   return (
@@ -13,11 +13,13 @@ function App() {
           
           <Header/>
           <Navbar/>
+          
          
 
          <main>   
               <Route path="/product/:id" component={ProductScreen} ></Route>
               <Route path="/" component={HomeScreen} exact></Route>
+              <Route path="/categorie/:id" component={CategorieScreen}></Route>
           </main> 
 
           

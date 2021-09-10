@@ -7,6 +7,7 @@ import Carousel from '../Components/Carousel';
 import Categories from '../Components/Categories';
 
 
+
 function HomeScreen() {
    const [products,setProducts]= useState([]);
    const [loading,setLoading]= useState(false)
@@ -31,6 +32,7 @@ function HomeScreen() {
 
     return ( 
       <Fragment>
+        
       <Carousel/>
                   <div className="container-fluid">
                       {

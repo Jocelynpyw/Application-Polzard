@@ -8,7 +8,7 @@ import data from '../data';
      if(!product){
          return<div>Product Not Found</div>
      }
-     console.log(product.image);
+     console.log(props);
      
     return (
         

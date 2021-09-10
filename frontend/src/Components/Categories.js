@@ -1,72 +1,59 @@
 import React from 'react'
+import dataCategorie from '../Data/CategorieData';
+import { Link } from 'react-router-dom';
+
 
 function Categories() {
+    const data = dataCategorie.categorie;
+    
     return (
+        
     <>
+    
      <div id="nouveautes"> 
         <p>Categories</p>
         <a href="#!" style={{fontWeight: 'bold'}} ></a>
     </div>
 
-
       <div id="categorie">
+          
+
           <div className="container-categorie">
                 <div className="container-fluid">
                     <div className="row">
-                        <div className="categorie col-sm-12 col-xs-12">
-                  
-                            <div className="categorie-img">
-                                  <img src="img/pexels-terje-sollie-298863.jpg" alt=""/>
-            
-                              </div>
-                              <h1 className="categorie-title">Monsieur</h1>
-                                  <ol className="categorie-list">
-                                      <li className="categorie-list-item">Chemise</li>
-                                      <li className="categorie-list-item">Super 100</li>
-                                      <li className="categorie-list-item">jackette</li>
-                                      <li className="categorie-list-item">Chaussure Monsieur</li>
-            
-                                  </ol>
-                                  <p>Voir Tous les Sous ca . . .</p>
-                              
+                        {
+                            data.map((data,index)=>(
+                                    <div className="categorie col-sm-12 col-xs-12" key={index}>
+                    
+                                <div className="categorie-img">
+                                    <Link to={`/categorie/${data._id}`}>
+                                             <img src={data.image} alt=""/>
+                                    </Link>
+                                </div>
+                                <h1 className="categorie-title">{data.name}</h1>
+                                    <ol className="categorie-list">
+                                        
+                                      
+                                        <li className="categorie-list-item">{data.sousCategories[0]}</li>
+                                        <li className="categorie-list-item">{data.sousCategories[1]}</li>
+                                        <li className="categorie-list-item">{data.sousCategories[2]}</li>
+                                        <li className="categorie-list-item">{data.sousCategories[3]}</li>
+                               
+                
+                                    </ol>
+                                    <Link to={`/categorie/${data._id}`}>
+                                         <p>{data.lienConsul}</p>
+                                    </Link>
+                                
                             </div>
+                            ))
+                        }
+                        
         
-                            <div className="categorie col-xs-6 col-md-4">
-                          
-                                <div className="categorie-img">
-                                      <img src="img/2021-04-09_11-17-01-MMA-1site-A.jpg" alt=""/>
-                
-                                  </div>
-                                  <h1 className="categorie-title">Ensemble</h1>
-                                      <ol className="categorie-list">
-                                          <li className="categorie-list-item">Survette</li>
-                                          <li className="categorie-list-item">Jogging</li>
-                                          <li className="categorie-list-item">Veste</li>
-                                          <li className="categorie-list-item">salopette</li>
-                
-                                      </ol>
-                                      <p>Voir Tous les Sous ca . . .</p>
-                                  
-                                </div>
+                         
         
         
-                            <div className="categorie col-md-4 col-xs-6">
-                          
-                                <div className="categorie-img">
-                                      <img src="img/pexels-melvin-buezo-2529148.jpg" alt=""/>
-                
-                                  </div>
-                                  <h1 className="categorie-title">Chaussures</h1>
-                                      <ol className="categorie-list">
-                                          <li className="categorie-list-item">Marques</li>
-                                          <li className="categorie-list-item">Tennis</li>
-                                          <li className="categorie-list-item">Moquassin</li>
-                                          <li className="categorie-list-item">Docksailds</li>
-                
-                                      </ol>
-                                      <p>Voir Tous les Sous ca . . .</p>
-                                  
-                                </div>
+                           
                     </div>
                 </div>
 

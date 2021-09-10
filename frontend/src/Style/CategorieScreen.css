@@ -8,4 +8,12 @@
 .title-sous-categories{
     font-size: 1.4rem;
     margin: 20px 10px;
+    font-weight: bold;
+    color: white;
+}
+.box-categorie{
+    height: 6rem;
+    width: auto;
+    background-color: rgb(27,196,27);
+    margin: 20px 10px;
 }

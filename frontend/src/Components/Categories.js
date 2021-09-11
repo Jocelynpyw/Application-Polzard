@@ -23,7 +23,7 @@ function Categories() {
                     <div className="row">
                         {
                             data.map((data,index)=>(
-                                    <div className="categorie col-sm-12 col-xs-12" key={index}>
+                                    <div className="categorie col-sm-12 col-xs-12" style={{marginBottom:'80px'}} key={index}>
                     
                                 <div className="categorie-img">
                                     <Link to={`/categorie/${data._id}`}>
@@ -41,7 +41,7 @@ function Categories() {
                                
                 
                                     </ol>
-                                    <Link to={`/categorie/${data._id}`}>
+                                    <Link style={{textDecoration:'none'}} to={`/categorie/${data._id}`}>
                                          <p>{data.lienConsul}</p>
                                     </Link>
                                 

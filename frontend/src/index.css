@@ -415,7 +415,7 @@ footer{
     font-weight: bold ;
 }
 .menu-link{
-    width: 400px;
+    width: auto;
     height: 50px;
     display: flex;
     justify-content: space-between;
@@ -511,45 +511,9 @@ footer{
     #sidebar{
         display: none;
     }
-    #contact{
-        display: none;
-    }
-    .header{
-        display: flex;
-        flex-direction: column;
-        line-height: 40px;
-        padding: 40px 0px 40px 0px;
-    }
-    .sign-in{
-        position: absolute;
-        top: -2rem;
-        right:  0rem;
-        margin-bottom: none;
-        
-        
-    }
-    .panier img,.sign-in img{
-        width: 30px;
-        height: 30px;
-    }
-    .panier{
-        position: absolute;
-        top: -2rem;
-        right:  6rem; 
-        margin-bottom: none;
-
-       
-      
-    }
-    #logo{
-        position: absolute;
-        top: 2rem;
-        left: 0;
-        font-size: 1.3rem;
-    }
-    #logo>span{
-        font-size: 1.4rem;
-    }
+  
+   
+   
     .search-box{
         margin-top: 50px;
         /* margin-bottom: 20rem; */
@@ -561,11 +525,7 @@ footer{
     #carouselExampleControlsNoTouching{
         margin-top: 3rem;
     }
-    #bars{display: block;}
-    .search-box input{
-        width: 250px;
-        margin-left: 30px;
-    }
+   
 
     .footer-search-input{
         margin: 30px 20px 20px 20px;

@@ -1,6 +1,10 @@
 import React, { Fragment } from 'react'
 
 function Navbar() {
+    // window.addEventListener("scroll",()=>{
+    //     var sidebar = document.querySelector('#sidebar')
+    //     sidebar.classList.toggle("sticky",window.scrollY>-20);
+    // })
     return (
         <Fragment>
           <div id="sidebar">

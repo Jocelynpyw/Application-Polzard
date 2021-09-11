@@ -169,7 +169,9 @@ const Contact = styled.div`
 function Header() {
     return (
         <>
-       <HeaderDiv> 
+            <div className="container-fluid">
+                 <div className="row">
+                 <HeaderDiv> 
               <Logo> <span>Pol</span>zard</Logo>
               <SearchBox>
                   <SearchInsiteBox>
@@ -192,6 +194,8 @@ function Header() {
 
               </Contact>
           </HeaderDiv>
+                 </div>
+            </div>
         </>
     )
 }

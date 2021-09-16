@@ -1,34 +1,26 @@
-import React, { useState, useEffect, Fragment } from 'react'
-import axios from 'axios';
+import React, {  useEffect, Fragment } from 'react'
+import {useDispatch, useSelector} from 'react-redux';
 import SectionNouveaute from '../Components/SectionNouveaute';
 import LoadingBox from '../Components/LoadingBox';
 import MessageBox from '../Components/MessageBox';
 import Carousel from '../Components/Carousel';
 import Categories from '../Components/Categories';
+import Autre from '../Components/Autre';
+import {listProducts} from '../actions/productActions.js';
+
 
 
 
 function HomeScreen() {
-   const [products,setProducts]= useState([]);
-   const [loading,setLoading]= useState(false)
-   const [error,setError]= useState(false)
+  const dispatch = useDispatch();
+  const productList=useSelector ((state)=>state.productList);
+  const {loading,error,products}= productList;
+  console.log(productList);
 
-   useEffect(()=>{
-     const fetchData = async ()=>{
-       try{
-           setLoading(true)
-            const {data} = await axios.get('/api/products');
-            setLoading(false);
-            setProducts(data);
-       }catch(err){
-          setError(err.message);
-          setLoading(false);
-       }
-      
+  useEffect(()=>{
+    dispatch(listProducts())
+  },[dispatch]);
 
-     };
-     fetchData()
-   },[]);
 
     return ( 
       <Fragment>
@@ -54,6 +46,7 @@ function HomeScreen() {
                     </div>  
 
                     <Categories/>
+                    <Autre/>
 
            </Fragment>
     )

@@ -415,13 +415,13 @@ footer{
     font-weight: bold ;
 }
 .menu-link{
-    width: auto;
+    width: 400px;
     height: 50px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     align-items: center;
-    margin: 20px 20px 40px 20px;
+    margin: 20px 20px 40px 350px;
 }
 .menu-link img{
     height: 50px;
@@ -541,6 +541,9 @@ footer{
     font-weight: bold;
     display: none;
     
+    }
+    .menu-link{
+        margin: 20px 20px 40px 20px;
     }
      .spane{
         margin: 30px 100px 20px 20px;

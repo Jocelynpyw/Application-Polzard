@@ -40,7 +40,7 @@ function Footer(){
 
         </div>
        <div className="container-fluid">
-            <div className="row">
+            <div className="row " >
             <div className="menu-link">
             <img src="img/pinterest/icon-facebook.svg" alt=""/>
             <img src="img/pinterest/icon-instagram.svg" alt=""/>

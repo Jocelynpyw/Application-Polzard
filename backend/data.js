@@ -55,20 +55,28 @@ const data={
             rating:4,
             description:'qualite moyene'
         },
-        {
-            _id:'6',
-            name:'Veste Bleu',
-            categorie:'veste',
-            image:'img/pinterest/veste6.jpg',
-            price:'12 000',
-            countInStock:9,
-            brand:'Amiri',
-            rating:6,
-            description:'qualite superieur'
-        },
+        
     ]
 }
 
 
 
 export default data;
+
+
+
+
+
+
+
+// {
+//     _id:'6',
+//     name:'Veste Bleu',
+//     categorie:'veste',
+//     image:'img/pinterest/veste6.jpg',
+//     price:'12 000',
+//     countInStock:9,
+//     brand:'Amiri',
+//     rating:6,
+//     description:'qualite superieur'
+// },

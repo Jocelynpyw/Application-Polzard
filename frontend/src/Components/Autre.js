@@ -119,6 +119,14 @@ function Autre (){
       </div>
 
 
+      <div className="d-flex justify-content-center" style={{margin:'20px'}}>
+        <div className="spinner-border" role="status">
+          <span className="sr-only"></span>
+        </div>
+      </div>
+
+
+
 
 
 

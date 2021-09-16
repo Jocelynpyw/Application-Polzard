@@ -6,7 +6,6 @@ import HomeScreen from './Screens/HomeScreen';
 import ProductScreen from './Screens/ProductScreen';
 import CategorieScreen from './Screens/CategorieScreen';
 import Footer from './Components/Footer';
-import Autre from './Components/Autre';
 
 function App() {
   return (
@@ -25,7 +24,7 @@ function App() {
           </main> 
 
           
-        <Autre/>
+      
           <Footer/>
  </BrowserRouter>
  

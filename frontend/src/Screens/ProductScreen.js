@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 import LoadingBox from '../Components/LoadingBox';
 import MessageBox from '../Components/MessageBox';
@@ -7,8 +7,11 @@ import { detailsProducts } from '../actions/productActions';
 
 
  function ProductScreen(props) {
+    //  console.log(props)
+     
     //  const product = data.products.find((x)=>x._id===props.match.params.id);
     const dispatch = useDispatch();
+    const [qte,setQte]= useState(1);
     const productId = props.match.params.id;
     const productDetails =useSelector((state)=>state.productDetails)
     const {loading,error,product} = productDetails;
@@ -17,9 +20,11 @@ import { detailsProducts } from '../actions/productActions';
         dispatch(detailsProducts(productId));
     },[dispatch,productId])
 
+    const addToCartHandler = ()=>{
+         props.history.push(`/cart/${productId}?qte=${qte}`);
+    }
    
-     console.log(product);
-     
+
     return (
         
         <div>
@@ -41,8 +46,40 @@ import { detailsProducts } from '../actions/productActions';
                        <li className="product-brand">Frabricant : {product.brand}</li>
                        <li className="procuct-description">Description: {product.description}</li>
                        <li className="product-price"> prix : {product.price} Fcfa</li>
-                       <br/>
-                        <button className="btn btn-success w-40" style={{width:'220px'}}>Ajouter au Panier</button>
+                       
+                       {
+                           product.countInStock>0 ? (
+                               <> 
+                               <li>
+                                   <div className="row">
+                                        <div>Qte</div>
+                                        <div>
+                                            <select value={qte} onChange={e=>setQte(e.target.value)}>
+                                                {
+                                                    
+                                                    ([...Array(product.countInStock).keys()]).map(x=>(
+                                                        <option key={x + 1} value={x + 1}>
+                                                            {x + 1}
+                                                        </option>
+                           ))
+                                                }
+                                            </select>
+                                        </div>
+                                   </div>
+                               </li>
+                               <br/>
+                                 <li>
+                                     <button className="btn btn-success w-40" style={{width:'220px'}} onClick={addToCartHandler}>Ajouter au Panier</button>
+                                 </li>
+                                </>
+                                  ):(
+                                      <li>
+                                         <button className="btn btn-danger w-40" style={{width:'220px',}} disabled>Indisponible</button>
+                                     </li>
+                           )
+                               
+                         
+                       }
 
 
                        
@@ -70,13 +107,14 @@ import { detailsProducts } from '../actions/productActions';
                                  </div>
                            </div>
                        </li>
-                       <li>
+                       
+                       {/* <li>
                            <button className="btn btn-success">Ajouter au panier</button><br/>
                            <button className="btn btn-success " style={{width:'220px'}}>Acheter</button>
 
                        
                        <br/>
-                       </li>
+                       </li> */}
                        
                    </ul>
                    

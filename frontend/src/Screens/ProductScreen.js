@@ -31,8 +31,9 @@ import { detailsProducts } from '../actions/productActions';
 
                     <div className="row">
                <div className="col-md-6  product-screen-box">
-                   {/* <img className='img-product-screen' src={require(`../../public/${product.image}`).default} alt={`image de ${product.name} : ${product.image}`}/> */}
-                   <img className='img-product-screen' src={product.image} alt={`image de ${product.name} : ${product.image}`}/>
+                   {/* ici il y'a un petit souci je recois mes donees depuis mon backend seulement l'image non qui elle est toujours statique */}
+                   <img className='img-product-screen' src={require(`../../public/${product.image}`).default} alt={`image de ${product.name} : ${product.image}`}/>
+                   {/* <img className='img-product-screen' src={product.image} alt={`image de ${product.name} : ${product.image}`}/> */}
                </div>
                <div className="col-md-3">
                    <ul className="ul">

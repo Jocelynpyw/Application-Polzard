@@ -2,7 +2,7 @@ import React from 'react'
 
 function MessageBox(props) {
     return (
-        <div className={`alert alert-info`}>
+        <div className={`alert `}>
             {props.children}
         </div>
     )

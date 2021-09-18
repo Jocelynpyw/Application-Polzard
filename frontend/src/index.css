@@ -618,3 +618,91 @@ footer{
         height: 14rem;
         position: relative;
     }
+
+    /*               style dans cart Screen */
+    .smalle{
+        max-width: 4rem;
+        width: 100%;
+    }
+    .cart-item{
+        list-style: none;
+        margin-top: 20px;
+        padding: 5px 0px;
+        border: 1px solid rgba(27, 196, 27,0.5);
+        border-left: none;
+        border-right: none;
+    }
+    .cart-item:hover{
+        background-color: rgba(27, 196, 27,0.2);
+    }
+    .item-name-box,.item-price,.item-select-box,.item-button{
+        margin-top: 20px;
+    }
+    .item-name{
+        text-decoration: none;
+        font-size: 1.2rem;
+        color: black;
+        font-weight: 400;
+    }
+    .item-select-box select{
+        padding: 5px 5px;
+        max-width: 4rem;
+        width: 100%;
+        border-radius: 5px;
+        outline: none;
+    }
+    .item-select-box select:focus, .item-select-box select:hover{
+        box-shadow: 0px 0px 7px rgb(27, 196, 27);
+    }
+    .item-price{
+        font-weight: bold;
+        
+    }
+    .item-button button{
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0px 0px 3px black;
+        padding: 5px 10px;
+        background: #d43f3a;
+        color: white;
+    }
+    .item-button button:hover{
+        background: rgb(224, 55, 50);
+    }
+    .cart-item-title{
+        text-align: center;
+        font-size: 1.4rem;
+        font-weight: 1000;
+        margin: 25px;
+    }
+/*  toujours dans cart Screen message Box */
+#message-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    line-height: 4rem;
+    /* flex-wrap: wrap; */
+}
+    .message-box-title{
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding: 5px 10px;
+    }
+    .message-box-image{
+        max-width: 20rem;
+        width: 100%;
+        
+    }
+    .message-button{
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        background-color: rgb(27, 196, 27);
+        padding: 0px 10px;
+        margin: 30px 0px 0px 20px;
+        color: white;
+
+    }

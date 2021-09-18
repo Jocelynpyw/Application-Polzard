@@ -5,7 +5,11 @@ import { Link } from 'react-router-dom'
 function SectionNouveaute( props) {
     const {product} = props
     // console.log(product)
-
+        const ajouterAuPanier =(e)=>{
+          
+           
+            
+        }
     return (
         
         <Fragment>
@@ -16,7 +20,8 @@ function SectionNouveaute( props) {
                     <p className="article-name">{product.name} </p>
                     <p className="article-prix">{product.price}</p>
                     <div className="article-panier">
-                        <img src="img/panier3.svg" alt="ajouter au panier"/>
+                        
+                        <img src="img/panier3.svg" alt="ajouter au panier" onClick={()=>ajouterAuPanier()} />
                     </div>
   
                 </div>

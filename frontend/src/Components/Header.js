@@ -1,11 +1,15 @@
 import React from 'react';
 import '../Style/Header.css';
+import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 
 
 function Header() {
+    const cart =useSelector(state=>state.cart);
+    const {cartItems}= cart;
     return (
-    
+    // ce composant n'est pas du tout termine , mais je veux utiliser le panier pour la fin de la nouvelle fonctionnalite addToCart
      <div className ="container">
          <div className="row">
                 <div class="header "> 
@@ -24,8 +28,16 @@ function Header() {
             <p>se connecter</p>
         </div>
         <div class="panier">
-            <img src="img/panier3.svg" alt=""/>
-            <p>mon panier</p>
+            <Link to="/cart" style={{textDecoration:'none'}}>            <img src="img/panier3.svg" alt=""/>
+
+                    {
+                        cartItems.length>0 && (
+                        <span className="badge">{cartItems.length}</span>
+                        )
+                    }
+
+                    <p >mon panier</p>
+            </Link>
 
         </div>
         <div id="contact">

@@ -1,6 +1,6 @@
 import React, { useEffect, Fragment } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addToCart } from '../actions/cartActions';
+import { addToCart, removeFromCart } from '../actions/cartActions';
 import MessageBox from '../Components/MessageBox'
 import {Link} from 'react-router-dom'
 import panier_vide from './panier_vide.png';
@@ -17,7 +17,11 @@ export default function CartScreen(props){
         }
     },[dispatch,productId,qte]);
     const removeFromCartHandler=(id)=>{
-        //delete action
+        dispatch(removeFromCart(id));
+    }
+
+    const checkoutHandler =()=>{
+        props.history.push('/signin?redirect=shipping')
     }
     return(
       <div className="container-fluid">
@@ -51,7 +55,7 @@ export default function CartScreen(props){
                                      <Link to={`/product/${item.product}`} className="item-name">{item.name}</Link>
                                  </div>
                                  <div className="col-md-1 col-xs-12 item-select-box">
-                                     <select value={item.qte} onChange={e=>dispatch(addToCart(item.product),Number(e.target.value))}>
+                                     <select value={item.qte} onChange={e=>dispatch(addToCart(item.product,Number(e.target.value))) } >
                                           {
                                                     
                                                     ([...Array(item.countInStock).keys()]).map(x=>(
@@ -63,7 +67,7 @@ export default function CartScreen(props){
                                      </select>
                                  </div>
                                  <div  className="col-md-2 col-xs-12 item-price">
-                                     ${item.price}
+                                     {item.price} Fcfa
                                  </div>
                                  <div className="col-md-2 col-xs-12 item-button">
                                      <button type="button" onClick={()=>removeFromCartHandler(item.product)}>Supprimer</button>
@@ -73,6 +77,27 @@ export default function CartScreen(props){
                        ))
                    }
                </ul>
+               <div className="cart ">
+                   <ul>
+                       <li style={{listStyle:'none'}}>
+                          <div className="panier-info">
+                                <h5 className="panier-total-item">
+                                    Total Produit :  {cartItems.reduce((a,c)=>a + c.qte,0)}  
+                                </h5>
+                                <h4 className="panier-total-prix"> Total Prix : {cartItems.reduce((a, c)=> a + c.price * c.qte,0)} Fcfa</h4>
+                          </div>
+
+                       </li>
+                       <li style={{listStyle:'none'}}>
+                           <div className="cart-button row">
+                                <Link to="/" className="col-md-2" style={{textDecoration:'none'}}> <p className="para-home">Continuer les Achats</p></Link>
+                                <p className="col-md-7"></p>
+                                <div className="col-md-3" style={{textDecoration:'none'}}><button className="button-commande" onClick={checkoutHandler}>Passer la Commande</button></div>
+                           </div>
+                       </li>
+                   </ul>
+
+               </div>
                </Fragment>
            )
          }

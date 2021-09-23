@@ -4,17 +4,40 @@
     color: rgb(27,196,27) ;
     padding: 5px 10px;
     font-weight: bold;
+
+
 }
 .title-sous-categories{
-    font-size: 1.4rem;
-    margin: 20px 10px;
+    font-size: 1.1rem;
+    margin: -20px 10px;
     font-weight: bold;
-    color: white;
+    color: black;
+    text-align: center;
 }
 .box-categorie{
     height: 6rem;
+    position: relative;
     width: auto;
-    background-color: rgb(27,196,27);
     margin: 20px 10px;
     cursor: pointer;
+    transition: margin-top 0.2s;
+}
+.box-categorie:hover{
+    margin-top: -5px;
+    opacity: 0.9;
+}
+.image-sous-categories{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    z-index: -1;
+}
+.box-categorie-cover{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0,0.7);
+    /* z-index: 45; */
 }

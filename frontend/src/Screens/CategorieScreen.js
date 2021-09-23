@@ -9,19 +9,22 @@ function  CategorieScreen (props){
     if(!data){
         return<div>Categorie Not Found</div>
     }
-    console.log(data.sousCategories);
     
     
     
     return(
         <Fragment>
             <h1 className="title">{data.name}</h1>
-            <div className="container">
+            <div className="container" style={{marginTop:'4rem'}}>
                 <div className="row">
                     {
                        data.sousCategories.map((sousCategories,index)=>(
-                           <div className="col-xs-12 col-md-3 box-categorie" key={index}>
-                               <h1 className="title-sous-categories">{sousCategories}</h1>
+                           <div className="col-xs-2 col-md-2 box-categorie" key={index}>
+                               <div className=" box-categorie-cover">
+                               <h1 className="title-sous-categories">{sousCategories.title}</h1>
+
+                               </div>
+                               <img className="image-sous-categories"  src={`../${sousCategories.image}`}></img>
                               
                                
                                
@@ -35,6 +38,9 @@ function  CategorieScreen (props){
                 </div>
 
             </div>
+            <br/>
+            <br/>
+            <br/>
         </Fragment>
         
     )

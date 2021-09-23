@@ -2,10 +2,12 @@ import express from 'express';
 import mongoose from 'mongoose';
 import data from './data.js';
 import userRouter from './routers/userRouter.js';
+import categorieData from './categorieData.js'
 
 const app = express ();
 
-mongoose.connect('mongodb://localhost/polzard',{
+
+mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/polzard',{
     useNewUrlParser:true,
     useUnifiedTopology:true,
     // useCreateIndex:true,
@@ -16,6 +18,32 @@ mongoose.connect('mongodb://localhost/polzard',{
     console.log('Something Wrong '+error );
     
 });
+
+
+
+app.use('/api/users' ,userRouter);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 app.get('/api/products/:id',(req,res)=>{
     const product = data.products.find(x =>x._id === req.params.id);
@@ -34,7 +62,9 @@ app.get('/api/products',(req,res)=>{
     res.send(data.products);
 });
 
-app.use('api/users' ,userRouter);
+app.get('/api/categories',(req,res)=>{
+    res.send(categorieData.categories)
+})
 
 app.get('/',(req,res)=>{
     res.send('Votre serveur choco bio est pret pour la partouze du lundi soir');

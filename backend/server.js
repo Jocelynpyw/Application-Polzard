@@ -3,8 +3,14 @@ import mongoose from 'mongoose';
 import userRouter from './routers/userRouter.js';
 import categorieData from './categorieData.js'
 import productRouter from './routers/productRouter.js';
+import dotenv from 'dotenv';
+
+
+dotenv.config();
 
 const app = express ();
+app.use(express.json)
+app.use(express.urlencoded({extended : true}))
 
 
 mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/polzard',{
@@ -30,32 +36,12 @@ app.use((err,req,res,next)=>{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 app.get('/api/categories',(req,res)=>{
     res.send(categorieData.categories)
 })
 
 app.get('/',(req,res)=>{
-    res.send('Votre serveur choco bio est pret pour la partouze du lundi soir');
+    res.send('Votre serveur est pret');
 
 });
 const port =process.env.PORT || 5000;

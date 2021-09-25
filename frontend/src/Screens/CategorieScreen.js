@@ -19,12 +19,12 @@ function  CategorieScreen (props){
                 <div className="row">
                     {
                        data.sousCategories.map((sousCategories,index)=>(
-                           <div className="col-xs-2 col-md-2 box-categorie" key={index}>
-                               <div className=" box-categorie-cover">
-                               <h1 className="title-sous-categories">{sousCategories.title}</h1>
+                           <div  key={index} className="col-xs-2 col-md-2 box-categorie">
+                               <div className=" box-categorie-cover"  >
+                               <h1 className="title-sous-categories" >{sousCategories}</h1>
 
                                </div>
-                               <img className="image-sous-categories"  src={`../${sousCategories.image}`}></img>
+                               {/* <img className="image-sous-categories"   src={`../${sousCategories.image}`}></img> */}
                               
                                
                                

@@ -3,6 +3,7 @@ import data from '../data.js';
 import User from '../models/userModel.js';
 import expressAsyncHandler from 'express-async-handler'
 import bcrypt from 'bcryptjs'
+import { generateToken } from '../utils.js';
 
 
 const userRouter= express.Router();
@@ -19,6 +20,8 @@ userRouter.get ('/seed', async(req,res)=>{
 //   ici je vais creer la route qui menera a a la connexion d'un utilisattion
 
 userRouter.post('/signin',expressAsyncHandler(async(req,res)=>{
+    console.log('je suis a l\' interieur e la route ');
+    
     const user = await User.findOne({email: req.body.email});
     if(user){
         if (bcrypt.compareSync(req.body.password,user.password)){

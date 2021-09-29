@@ -6,6 +6,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   user-select: none;
+  /* background-color: rgb(0, 253, 253); */
+  background-color: rgb(253, 253, 253);
 }
 
 
@@ -17,7 +19,13 @@ body {
     
     
 }
-
+/*  Style de mon Toast */
+.custom-toast{
+font-size: 0.9rem;
+font-weight: bold;
+max-width: 12rem;
+width: 100%;
+}
 .row>*{
     flex-shrink: 0;
     width: auto important;
@@ -65,7 +73,7 @@ body {
     top: -2px;
     left: 0;
     font-family: 'Crimson Text', serif;
-    color:#00a0f0;
+    color:rgb(82,112,255);
     width: 0;
     overflow: hidden;
     white-space: nowrap;
@@ -83,6 +91,7 @@ body {
 }
 
 /*           Carousel               */
+
 .carousel-item h1{
 }
 .carousel-indicators [data-bs-target]{
@@ -91,10 +100,7 @@ body {
     border-radius: 50%;
     background-color: aliceblue;
 }
-.active{
-  background-color:rgb(27, 196, 27);
-  color: rgb(27, 196, 27);
-}
+
 /*                       section titre de nouveates                     */
 #nouveautes{
     width: 100%;
@@ -108,7 +114,7 @@ body {
     position: absolute;
     left: 20px;
     top: 5px;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     font-weight: bold;
 
 }
@@ -149,9 +155,57 @@ body {
     height: 10rem; */
     position: relative;
     display: block;
-    margin: auto;
-    width: auto;
+    margin: 10px;
 
+    width: auto;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0,0.15);
+
+}
+.article:hover .article-cover{
+    width: 90%;
+} 
+.article:hover  .article-items-3 li img{
+    visibility: visible;
+}
+.article-cover{
+    position: absolute;
+    bottom: 22%;
+    left: 0%;
+    width: 0%;
+    /* width: 87%; */
+    height: 15%;
+    cursor: pointer;
+    z-index: 200;
+    background-color: rgba(0, 0, 0,0.8);
+    transition: width 0.3s ease;
+
+
+}
+.article-items-3{
+    position: relative;
+    top: 20%;
+    right: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    list-style: none;
+}
+.article-items-3 li{
+text-decoration: none;}
+.article-cover:hover{
+    background-color: rgba(0, 0, 0,0.7);
+}
+.article-items-3 li img{
+    height: 1.5rem;
+    visibility: hidden;
+    transition: visibility 0.3 ease-in-out;
+    transition: padding 0.07s ease-in-out;
+    opacity: 0.8;
+}
+.article-items-3 li img:hover{
+    padding: 3px;
+    opacity: 1;
 }
 .small{
     width: 13rem;
@@ -160,7 +214,7 @@ body {
 }
 .article-img{
     position: relative;
-    height: 12rem;
+    height: 16rem;
     width: 12rem;
     /* width:208.75px; */
 }
@@ -171,6 +225,7 @@ body {
     object-fit: cover;
     transition: padding 0.2s,opacity 0.2s;
     border-radius: 5px;
+    transform: translateX(0px);
 }
 .article-img img:hover{
     padding: 15px;
@@ -184,7 +239,7 @@ body {
     padding: 5px 10px;
 }
 .article-prix{
-    color: #00a0f0;
+    color: rgb(82,112,255);
     font-weight: bold;
     font-size: 1.1rem;
     padding: 5px 10px;
@@ -197,7 +252,7 @@ body {
     bottom: 10%;
     right: 10%;
     cursor: pointer;
-    color: #00a0f0;
+    color: rgb(82,112,255);
 }
 /*                     Categories            */
 
@@ -218,13 +273,14 @@ body {
     top: 0;
     width: 100%;
     height: 10rem;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0,0.15);
 }
 .categorie-img img{
     position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 20px;
+    border-radius: 2px;
 }
 .categorie-title{
     position: absolute;
@@ -246,7 +302,7 @@ body {
     padding: 0px 2px;
 }
 .categorie p{
-    color: #00a0f0;
+    color: rgb(82,112,255);
     font-size: 1.4rem;
     font-weight: bold;
     cursor: pointer;
@@ -256,7 +312,7 @@ body {
 
 /*                   sectionn   ce que  nous vous proposons        */
 
-.article-cover{
+.article-covere{
     position: absolute;
     top: 0;
     width: 100%;
@@ -265,10 +321,8 @@ body {
     cursor: pointer;
 
 }
-.article-cover:hover{
-    background-color: rgba(0, 0, 0,1);
-}
-.article-cover h1{
+
+.article-covere h1{
     position: absolute;
     text-align: center;
     top: 30%;
@@ -405,7 +459,7 @@ footer{
     right: 0;
     width: 7rem;
     height: 40px;
-    background-color: #00a0f0;
+    background-color: rgb(82,112,255);
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     cursor: pointer;
@@ -427,7 +481,7 @@ footer{
 .menu-link img{
     height: 50px;
     width: 50px;
-    /* background-color: #00a0f0; */
+    /* background-color: rgb(82,112,255); */
     color: rgba(0, 0, 0,0.9);
     border-radius: 50%;
     margin: 20px;
@@ -557,7 +611,7 @@ footer{
         /*width: 7rem;*/
         width: 3rem;
         height: 40px;
-        background-color: #00a0f0;
+        background-color: rgb(82,112,255);
         text-align: center;
         font-family: Arial, Helvetica, sans-serif;
         cursor: pointer;
@@ -731,7 +785,7 @@ footer{
         border-radius: 5px;
         padding: 5px 10px;
         color: white;
-        background:#00a0f0 ;
+        background:rgb(82,112,255) ;
         font-weight: bold;
         transition: box-shadow 0.2s;
     }
@@ -747,7 +801,7 @@ footer{
         transition: text-shadow 0.2s;
     }
     .para-home:hover{
-        text-shadow: 0px 0px 5px #00a0f0;
+        text-shadow: 0px 0px 5px rgb(82,112,255);
 
     }
 

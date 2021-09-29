@@ -5,6 +5,7 @@ import MessageBox from '../Components/MessageBox'
 import {Link} from 'react-router-dom'
 import panier_vide from './panier_vide.png';
 
+
 export default function CartScreen(props){
     const productId = props.match.params.id;
     const qte = props.location.search? Number(props.location.search.split('=')[1]):1;

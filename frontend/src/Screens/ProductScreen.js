@@ -7,6 +7,8 @@ import { detailsProducts } from '../actions/productActions';
 
 
  function ProductScreen(props) {
+     
+
     //  console.log(props)
      
     //  const product = data.products.find((x)=>x._id===props.match.params.id);

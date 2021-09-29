@@ -30,7 +30,7 @@ function Categories() {
                                              <img src={data.image} alt=""/>
                                     </Link>
                                 </div>
-                                <h1 className="categorie-title">{data.name}</h1>
+                                <h1 className="categorie-title"></h1>
                                     <ol className="categorie-list">
                                         
                                       

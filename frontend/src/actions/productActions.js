@@ -14,6 +14,7 @@ export const listProducts =()=>async(dispatch)=>{
 }
 
 
+
 export const detailsProducts =(productId)=>async(dispatch)=>{
     
     dispatch({
@@ -22,7 +23,6 @@ export const detailsProducts =(productId)=>async(dispatch)=>{
     try{
         // const {data} = await Axios.get(`/api/products/${productId}`);
         const {data} = await Axios.get(`/api/products/${productId}`);
-        console.log('La data ici c\'est :'+data);
 
         dispatch({
             type:PRODUCT_DETAILS_SUCCESS,

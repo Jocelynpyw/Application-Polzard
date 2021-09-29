@@ -1,12 +1,13 @@
 const dataCategorie={
 
     categorie:[
+
         {
             _id:'1',
             name:'Monsieur',
             categorie:'Monsieur',
-            sousCategories:["Chemise","Super 100" ,"jackette","Chaussure Mr"],
-            // sousCategories:[{title:"Chemise",image:'img/pexels-terje-sollie-298863.jpg'},{title:"Super 100" ,image:'img/2021-04-09_11-17-01-MMA-1site-A.jpg'},{title:"jackette",image:'img/pexels-melvin-buezo-2529148.jpg'},{title:"Chaussure Mr",image:'img/pexels-melvin-buezo-2529148.jpg'}],
+            sousCategories:["Chemise","Super 100" ,"Respo","Chaussure Mr"],
+            // sousCategories:[{_id:'1',title:"Chemise",image:'img/pexels-terje-sollie-298863.jpg'},{_id:'2',title:"Super 100" ,image:'img/2021-04-09_11-17-01-MMA-1site-A.jpg'},{_id:'3',title:"jackette",image:'img/pexels-melvin-buezo-2529148.jpg'},{_id:'4',title:"Chaussure Mr",image:'img/pexels-melvin-buezo-2529148.jpg'}],
             image:'img/pexels-terje-sollie-298863.jpg',
             lienConsul:'Voir Tous les Sous ca . . .'
         },
@@ -15,8 +16,8 @@ const dataCategorie={
             _id:'2',
             name:'Ensemble',
             categorie:'Ensemble',
-            sousCategories:["Survette","Jogging","Veste","salopette"],
-            // sousCategories:[{title:"Chemise",image:'img/pexels-terje-sollie-298863.jpg'},{title:"Super 100", image:'img/2021-04-09_11-17-01-MMA-1site-A.jpg'},{title:"jackette",image:'img/pexels-melvin-buezo-2529148.jpg'},{title:"Chaussure Mr",image:'img/pexels-melvin-buezo-2529148.jpg'}],
+            sousCategories:["Survette","Jogging","Veste","Ensemble"],
+            // sousCategories:[{_id:'1',title:"Chemise",image:'img/pexels-terje-sollie-298863.jpg'},{_id:'2',title:"Super 100", image:'img/2021-04-09_11-17-01-MMA-1site-A.jpg'},{_id:'3',title:"jackette",image:'img/pexels-melvin-buezo-2529148.jpg'},{_id:'4',title:"Chaussure Mr",image:'img/pexels-melvin-buezo-2529148.jpg'}],
 
             image:'img/2021-04-09_11-17-01-MMA-1site-A.jpg',
             lienConsul:'Voir Tous les Sous ca . . .'
@@ -27,8 +28,8 @@ const dataCategorie={
             _id:'3',
             name:'Chaussure',
             categorie:'Chaussure',
-            sousCategories:["Marques","Tennis","Moquassin","Docksailds"],
-            // sousCategories:[{title:"Chemise",image:'img/pexels-terje-sollie-298863.jpg'},{title:"Super 100" ,image:'img/2021-04-09_11-17-01-MMA-1site-A.jpg'},{title:"jackette",image:'img/pexels-melvin-buezo-2529148.jpg'},{title:"Chaussure Mr",image:'img/pexels-melvin-buezo-2529148.jpg'}],
+            sousCategories:["Chaussure","Tennis","Moquassin","Docksailds"],
+            // sousCategories:[{_id:'1',title:"Chemise",image:'img/pexels-terje-sollie-298863.jpg'},{_id:'2',title:"Super 100" ,image:'img/2021-04-09_11-17-01-MMA-1site-A.jpg'},{_id:'3',title:"jackette",image:'img/pexels-melvin-buezo-2529148.jpg'},{_id:'4',title:"Chaussure Mr",image:'img/pexels-melvin-buezo-2529148.jpg'}],
 
             image:'img/pexels-melvin-buezo-2529148.jpg',
             lienConsul:'Voir Tous les Sous ca . . .'

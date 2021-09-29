@@ -30,6 +30,7 @@ function Autre (){
                       </div>
       
                   </div>
+
       
                   <div className="article col-md-4 col-xs-6">
                     <div className="article-img">
@@ -77,7 +78,7 @@ function Autre (){
                         <img src="img/panier3.svg" alt="ajouter au panier"/>
                     </div>
       
-                    <div className="article-cover">
+                    <div className="article-covere">
                         <h1>Plus de Propositions 
                             
                             <i className="fas fa-chevron-right" style={{color: "00a0f0"}}></i>
@@ -98,7 +99,7 @@ function Autre (){
             <div className="row">
             <section id="market">
                 <div className="col-md-6 market-img">
-                    <img src="img/pinterest/cdecd0d1464e0adae448c10190a989c1.jpg" alt=""/>
+                    <img src="img/pinterest/telechargement.png" alt="" style={{objectFit:'contain'}}/>
                 </div>
                 <div className=" col-md-6 market-img">
                     <img src="img/pinterest/2017-10-19_09-34-25_boss.png" alt="" style={{objectFit: 'contain'}}/>

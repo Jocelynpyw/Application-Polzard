@@ -1,5 +1,5 @@
 import Axios from 'axios'
-import { USER_SIGNIN_REQUEST, USER_SIGNIN_FAIL, USER_SIGNIN_SUCCESS } from "../Constants/userConstants"
+import { USER_SIGNIN_REQUEST, USER_SIGNIN_FAIL, USER_SIGNIN_SUCCESS, USER_SIGNIN_SIGNOUT } from "../Constants/userConstants"
 
  
 
@@ -12,11 +12,17 @@ import { USER_SIGNIN_REQUEST, USER_SIGNIN_FAIL, USER_SIGNIN_SUCCESS } from "../C
         localStorage.setItem('userInfo',JSON.stringify(data));
 
      } catch (error) {
-         dispatch({
+        dispatch({
              type: USER_SIGNIN_FAIL,payload:
              error.response && error.response.data.message
              ?error.message.data.message
              :error.message
          })
      }
+ }
+
+ export const signout = ()=> async(dispatch)=>{
+     localStorage.removeItem('userInfo');
+     localStorage.removeItem('cartItems');
+     dispatch({type:USER_SIGNIN_SIGNOUT});
  }

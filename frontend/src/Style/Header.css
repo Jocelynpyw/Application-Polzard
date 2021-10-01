@@ -192,3 +192,46 @@
 
 }
 
+
+
+
+/*               DropDown styled              */
+
+.dropdown{
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-content {
+    position: absolute;
+    display: none;
+    top: 0;
+    min-width: 7rem;
+    padding: 0.2rem;
+    z-index: 1;
+    background-color: #5270ff;
+    margin: 0;
+    margin-top: 1.4rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+a{
+    text-decoration: none;
+}
+.user-name{
+    position: absolute;
+    width: 2.2rem;
+    height: 2.29rem;
+    text-align: center;
+    background: #5270ff;
+    /* margin-top: -0.6rem; */
+    font-size: 1.4rem;
+    font-weight: bolder;
+    color: white;
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 5px rgba(255, 255, 255,.01);
+}

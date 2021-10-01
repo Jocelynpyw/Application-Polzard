@@ -1,13 +1,17 @@
-import React, { useState } from 'react'
-import {useDispatch} from 'react-redux'
+import React, { useState, useEffect } from 'react'
+import {useDispatch, useSelector} from 'react-redux'
 import {Link} from 'react-router-dom'
 import '../Style/SigninScreen.css';
 import { signin } from '../actions/userActions';
 
-function SigninScreen(){
+function SigninScreen(props){
     const dispatch = useDispatch()
     const [email,setEmail]=useState('');
     const [password,setPassword]=useState('');
+
+    const redirect = props.location.search? props.location.search.split('=')[1]:'/';
+     const userSignin = useSelector((state)=>state.userSignin)
+    const {userInfo} = userSignin;
     const submitHandler=(e)=>{
         console.log(email);
         console.log(password);
@@ -15,6 +19,11 @@ function SigninScreen(){
         e.preventDefault();
         dispatch(signin(email,password));
     }
+    useEffect(()=>{
+        if(userInfo){
+            props.history.push(redirect);
+        }
+    },[userInfo,props.history,redirect]);
     return(
 
 

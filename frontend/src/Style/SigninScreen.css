@@ -1,0 +1,62 @@
+
+.content{
+    margin: 8%;
+    box-shadow: 0px 0px 5px rgba(82, 112, 255,.2);
+    padding: 4rem 1rem 4rem 1rem;
+    background-color: #fff;
+}
+.connexion-image{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.signin-text{
+    font-style: normal;
+    font-weight: bold !important;
+}
+.form-control{
+    display: block;
+    width: 80%;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    border-color: #5270ff !important;
+    border-style: solid !important;
+    /* border-width: 0 0 2px 0 !important; */
+    color: #495057;
+    height: auto;
+    border-radius: 1px;
+    outline: none;
+    box-shadow: none;
+    background-color: #fff;background-clip: padding-box;
+
+
+}
+.form-control:focus{
+    color: black;
+    border-color: #fff;
+    outline: 0;
+    box-shadow: none;
+    background-color: rgba(82, 112, 255,0.01);
+}
+.btn-class{
+    border-color: #5270ff;
+    color: #00ac96;
+    cursor: pointer;
+    max-width: 12rem;
+    width: 100%;
+    margin: 2rem 0 1rem 0;
+    padding: 5px 2px;
+    background-color: #fff;
+    border-radius: 5px;
+    border-width: 1px;
+    color: rgba(0, 0, 0, .9);
+    font-weight: 600 !important;
+    transition: color 0.1s;
+}
+.btn-class:hover{
+    /* bacground-color: #5270ff; */
+    background-color: #5270ff;
+    border-color: transparent;
+ 
+}

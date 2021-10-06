@@ -49,7 +49,7 @@ function  CategorieScreen (props){
                    
 
                 </div>
-                <h4 style={{margin:'10px'}}>Produits disponible de cette Categorie</h4>
+                <h4 style={{margin:'10px',marginBottom:'-3.4rem'}}>Produits disponible de cette Categorie</h4>
 
 
 

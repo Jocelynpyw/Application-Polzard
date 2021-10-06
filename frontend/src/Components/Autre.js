@@ -1,8 +1,19 @@
 import React, { Fragment } from 'react';
+import { useSelector } from 'react-redux';
+import SectionNouveaute from './SectionNouveaute';
+import LoadingBox from './LoadingBox';
 
 function Autre (){
+
+
+    const data=useSelector((state)=>state.productList);
+   var {Loading,error,products} = data;
+   var product
+   
+    
     return(
     <Fragment>
+        <div>
     <div id="nouveautes" style={{marginTop: '50px'}}>
           <p>Nous Proposons pour Vous</p>
           <a href="#!" style={{fontWeight: 'bold'}}>Parceque Vous Etes Unique!</a>
@@ -99,7 +110,7 @@ function Autre (){
             <div className="row">
             <section id="market">
                 <div className="col-md-6 market-img">
-                    <img src="img/pinterest/telechargement.png" alt="" style={{objectFit:'contain'}}/>
+                    <img src="img/sale.jpg" alt="" style={{objectFit:'contain'}}/>
                 </div>
                 <div className=" col-md-6 market-img">
                     <img src="img/pinterest/2017-10-19_09-34-25_boss.png" alt="" style={{objectFit: 'contain'}}/>
@@ -120,13 +131,30 @@ function Autre (){
       </div>
 
 
-      <div className="d-flex justify-content-center" style={{margin:'20px'}}>
+     
+
+      {/* <div className="container-fluid">
+                            <div className="row">
+                          
+                                   {
+
+                                       products.map((product)=>(
+                                           <SectionNouveaute product={product} key={product._id}/>
+                                       ))
+                                   }
+          </div>
+            </div> */}
+
+
+
+      
+
+            </div>
+        <div className="d-flex justify-content-center" style={{margin:'20px'}}>
         <div className="spinner-border" role="status">
           <span className="sr-only"></span>
         </div>
       </div>
-
-
 
 
 

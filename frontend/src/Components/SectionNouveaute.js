@@ -12,7 +12,12 @@ import "react-toastify/dist/ReactToastify.css";
 
 function SectionNouveaute( props) {
     const {product} = props
-    const [qte,setQte]=useState(1)
+    const [value,setValue]=useState(1)
+    const valuer=()=>{
+        setValue(-value)
+        console.log(value);
+        
+    }
   
     const dispatch = useDispatch()
     const toaste=()=>{
@@ -40,9 +45,22 @@ function SectionNouveaute( props) {
              <div className="article col-md-2 col-xs-6">
                  <div className="article-cover">
                         <ul className="article-items-3">
-                                   {/* <li><img src="../../img/pinterest/cart.svg" onClick={addToCartHandler}></img></li> */}
-                                   <li onClick={toastePanier}><img src="../../img/pinterest/cart.svg" onClick={()=>dispatch(addToCart(product._id,1))}></img></li>
-                            <li onClick={toaste}><img src="../../img/pinterest/heart.svg"  ></img></li>
+                                   <li onClick={toastePanier}>
+                                       
+                                       <img src="../../img/pinterest/cart.svg" onClick={()=>dispatch(addToCart(product._id,1))}></img>
+                                    
+                                    </li>
+
+                                    {value==1? (
+                                         <li onClick={valuer}><img src="../../img/pinterest/heart.svg"  ></img></li>
+
+                                    ):
+                                    value==-1? (<li onClick={valuer}>
+                                                                                 <li onClick={valuer}><img src="../../img/pinterest/hearte.svg"  ></img></li>
+
+                                    </li>):(null)
+
+                                        }
 
                             <Link to={`/product/${product._id}`}>   
                               <li > <img src="../../img/pinterest/eye.svg"></img></li>

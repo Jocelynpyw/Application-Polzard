@@ -20,7 +20,6 @@ userRouter.get ('/seed', async(req,res)=>{
 //   ici je vais creer la route qui menera a a la connexion d'un utilisattion
 
 userRouter.post('/signin',expressAsyncHandler(async(req,res)=>{
-    console.log('je suis a l\' interieur e la route ');
     
     const user = await User.findOne({email: req.body.email});
     if(user){
@@ -33,12 +32,31 @@ userRouter.post('/signin',expressAsyncHandler(async(req,res)=>{
                 isAdmin:user.isAdmin,    
              token: generateToken(user)
             });
-            return;
+            return ;
         }
     }else
-    res.status(401).send({message: 'mot de passe ou email incorrect'})
+    res.status(401).send({message: 'mot de passe ou email incorrect '})
 } )
 )
+
+userRouter.post('/register',expressAsyncHandler(async(req,res)=>{
+    const user = new User({
+        name:req.body.name,
+        email:req.body.email,
+        password:bcrypt.hashSync(req.body.password,8),
+    });
+
+    const createUser = await user.save();
+    res.send(
+        {
+            _id: createUser._id,
+            name: createUser.name, 
+            email: createUser.email,  
+            isAdmin:createUser.isAdmin,    
+         token: generateToken(createUser)
+        }
+    )
+}))
 
 export default userRouter;
 

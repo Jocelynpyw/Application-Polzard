@@ -71,7 +71,7 @@ import { detailsProducts } from '../actions/productActions';
                                </li>
                                <br/>
                                  <li>
-                                     <button className="btn btn-success w-40" style={{width:'220px'}} onClick={addToCartHandler}>Ajouter au Panier</button>
+                                     <button className="btn btn-success w-40" style={{width:'220px',background:'rgb(82, 112, 255)',border:'none'}} onClick={addToCartHandler}>Ajouter au Panier</button>
                                  </li>
                                 </>
                                   ):(

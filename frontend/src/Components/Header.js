@@ -19,12 +19,12 @@ function Header() {
     }
     return (
     // ce composant n'est pas du tout termine , mais je veux utiliser le panier pour la fin de la nouvelle fonctionnalite addToCart
-     <div className ="container">
+     <div className ="container-fluid">
          <div className="row">
                 <div class="header "> 
-        <div id="bars"><i class="fas fa-bars fa-2x" style={{width: '40px', height:'40px'}}></i></div>
 
-        <div id="logo" className="col-md-2" > <span>Pol</span>zard</div>
+        <Link to= '/' style={{textDecoration:'none'}}>        <div id="logo" className="col-md-2" > <span>Pol</span>zard</div>
+</Link>
         <div class="search-box ">
             <div class="search-insite-box">
                 <input type="text" placeholder="Que Voulez Vous ..."/>

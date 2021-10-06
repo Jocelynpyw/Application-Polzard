@@ -42,7 +42,7 @@ function Categories() {
                 
                                     </ol>
                                     <Link style={{textDecoration:'none'}} to={`/categorie/${data._id}`}>
-                                         <p>{data.lienConsul}</p>
+                                         <p style={{fontSize:'1.2rem'}}>{data.lienConsul}</p>
                                     </Link>
                                 
                             </div>

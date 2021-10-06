@@ -5,6 +5,7 @@
     padding: 4rem 1rem 4rem 1rem;
     background-color: #fff;
 }
+
 .connexion-image{
     position: absolute;
     width: 100%;
@@ -59,4 +60,12 @@
     background-color: #5270ff;
     border-color: transparent;
  
+}
+.bg-dangerr{
+    height: 2rem;
+    border-radius: 2px;
+background-color: rgba(221, 118, 118,0.7);
+text-align: center;
+font-weight: bold;
+font-size: 1.1rem;
 }
